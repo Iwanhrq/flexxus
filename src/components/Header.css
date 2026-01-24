@@ -6,19 +6,20 @@
   background-color: #1a1a1a;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   z-index: 1000;
-  overflow-x: hidden;
+  overflow: visible; /* Mudei de hidden para visible */
 }
 
 .header-container {
   max-width: 1280px;
   width: 100%;
   margin: 0 auto;
-  height: 110px; /* 👈 CONTROLA A ALTURA REAL */
+  height: 110px;
   padding: 0 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   box-sizing: border-box;
+  position: relative;
 }
 
 .header-actions {
@@ -162,28 +163,32 @@
 
   .menu-toggle {
     display: flex;
+    z-index: 1001;
   }
 
   .nav {
     position: absolute;
-    top: 100%;
+    top: 100%; /* Fica logo abaixo do header */
     left: 0;
+    right: 0;
     width: 100%;
+    height: auto;
     background-color: #1a1a1a;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.3s ease;
+    transition: max-height 0.4s ease-in-out;
+    z-index: 998;
   }
 
   .nav-open {
-    max-height: 500px;
+    max-height: 400px; /* Altura suficiente para todos os itens */
   }
 
   .nav-list {
     flex-direction: column;
     gap: 0;
-    padding: 1rem 0;
+    padding: 0;
     width: 100%;
   }
 
@@ -192,26 +197,27 @@
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   }
 
-  [data-theme="light"] .nav-item {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  }
-
   .nav-item:last-child {
     border-bottom: none;
   }
 
   .nav-item a {
     display: block;
-    padding: 1rem 2rem;
+    padding: 1rem 1.5rem;
     width: 100%;
+    color: rgba(255, 255, 255, 0.87);
+  }
+
+  .nav-item a:hover,
+  .nav-item a:active,
+  .nav-item a:focus {
+    color: #ff6b35;
+    background-color: rgba(255, 107, 53, 0.05);
   }
 
   .nav-item a.active {
     background-color: rgba(255, 107, 53, 0.1);
-  }
-
-  [data-theme="light"] .nav-item a.active {
-    background-color: transparent;
+    color: #ff6b35;
   }
 
   .nav-item a::after {
@@ -226,6 +232,7 @@
 
   .header-container {
     padding: 0.5rem 1rem;
+    height: 80px;
   }
 }
 
@@ -251,10 +258,6 @@
   background-color: #213547;
 }
 
-[data-theme="light"] .nav {
-  background-color: #f0f2f5;
-}
-
 [data-theme="light"] .theme-toggle {
   color: #213547;
 }
@@ -266,5 +269,26 @@
 @media (max-width: 768px) {
   [data-theme="light"] .nav {
     background-color: #f0f2f5;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+
+  [data-theme="light"] .nav-item {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  [data-theme="light"] .nav-item a {
+    color: #1a1a1a;
+  }
+
+  [data-theme="light"] .nav-item a:hover,
+  [data-theme="light"] .nav-item a:active,
+  [data-theme="light"] .nav-item a:focus {
+    color: #ff6b35;
+    background-color: rgba(255, 107, 53, 0.05);
+  }
+
+  [data-theme="light"] .nav-item a.active {
+    background-color: rgba(255, 107, 53, 0.1);
+    color: #ff6b35;
   }
 }
