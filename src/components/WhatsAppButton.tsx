@@ -1,13 +1,11 @@
 import './WhatsAppButton.css';
 
-function WhatsAppButton() {
-  const phoneNumber = '5519123456789'; // Número no formato internacional (sem +, espaços ou caracteres especiais)
-  const message = 'Olá! Gostaria de saber mais sobre os produtos da Flexxus.';
-  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+const WHATSAPP_LINK = 'https://api.whatsapp.com/send/?phone=5519123456789&text=Ol%C3%A1%21+Gostaria+de+saber+mais+sobre+os+produtos+da+Flexxus.&type=phone_number&app_absent=0';
 
+function WhatsAppButton() {
   return (
     <a
-      href={whatsappUrl}
+      href={WHATSAPP_LINK}
       target="_blank"
       rel="noopener noreferrer"
       className="whatsapp-button"

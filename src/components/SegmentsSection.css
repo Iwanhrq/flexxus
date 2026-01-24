@@ -1,0 +1,234 @@
+.segments-home-section {
+    width: 100%;
+    max-width: 100%;
+    padding: 5rem 2rem;
+    background-color: transparent;
+    box-sizing: border-box;
+  }
+  
+  .segments-home-container {
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+  
+  .segments-home-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+  }
+  
+  .segments-home-text {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .segments-home-title {
+    font-size: 2.75rem;
+    font-weight: 700;
+    margin: 0;
+    color: rgba(255, 255, 255, 0.95);
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+  }
+  
+  .segments-home-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .segments-home-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.125rem;
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.6;
+    transition: all 0.3s ease;
+    padding: 0.5rem;
+    border-radius: 8px;
+  }
+  
+  .segments-home-item:hover {
+    background-color: rgba(255, 107, 53, 0.1);
+    transform: translateX(8px);
+  }
+  
+  .segments-home-icon {
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    background-color: #ff6b35;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    transition: all 0.3s ease;
+  }
+  
+  .segments-home-item:hover .segments-home-icon {
+    background-color: #ff8c42;
+    transform: scale(1.1);
+  }
+  
+  .segments-home-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem 2.5rem;
+    background-color: #ff6b35;
+    color: #ffffff !important;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.0625rem;
+    letter-spacing: 0.02em;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    align-self: flex-start;
+    margin-top: 1rem;
+    box-shadow: 0 4px 12px rgba(255, 107, 53, 0.3);
+  }
+  
+  .segments-home-button:hover {
+    background-color: #ff8c42;
+    color: #ffffff !important;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(255, 107, 53, 0.4);
+  }
+  
+  .segments-home-button:active,
+  .segments-home-button:focus,
+  .segments-home-button:visited {
+    color: #ffffff !important;
+  }
+  
+  .segments-home-button-icon {
+    transition: transform 0.3s ease;
+  }
+  
+  .segments-home-button:hover .segments-home-button-icon {
+    transform: translateX(4px);
+  }
+  
+  .segments-home-image {
+    width: 100%;
+    height: 500px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  }
+  
+  .segments-home-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 968px) {
+    .segments-home-section {
+      padding: 4rem 1.5rem;
+    }
+  
+    .segments-home-content {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+  
+    .segments-home-image {
+      order: -1;
+      height: 400px;
+    }
+  
+    .segments-home-title {
+      font-size: 2.25rem;
+    }
+  
+    .segments-home-item {
+      font-size: 1.0625rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .segments-home-section {
+      padding: 3rem 1.5rem;
+    }
+  
+    .segments-home-title {
+      font-size: 2rem;
+    }
+  
+    .segments-home-item {
+      font-size: 1rem;
+    }
+  
+    .segments-home-icon {
+      width: 44px;
+      height: 44px;
+    }
+  
+    .segments-home-image {
+      height: 350px;
+    }
+  
+    .segments-home-button {
+      padding: 0.875rem 2rem;
+      font-size: 0.95rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .segments-home-section {
+      padding: 2.5rem 1rem;
+    }
+  
+    .segments-home-title {
+      font-size: 1.75rem;
+    }
+  
+    .segments-home-list {
+      gap: 1rem;
+    }
+  
+    .segments-home-item {
+      font-size: 0.95rem;
+      gap: 0.75rem;
+    }
+  
+    .segments-home-icon {
+      width: 40px;
+      height: 40px;
+    }
+  
+    .segments-home-image {
+      height: 280px;
+    }
+  
+    .segments-home-button {
+      padding: 0.75rem 1.5rem;
+      font-size: 0.9rem;
+      width: 100%;
+      justify-content: center;
+    }
+  }
+  
+  /* Light Mode */
+  [data-theme="light"] .segments-home-title {
+    color: #213547;
+  }
+  
+  [data-theme="light"] .segments-home-item {
+    color: rgba(33, 53, 71, 0.85);
+  }
+  
+  [data-theme="light"] .segments-home-item:hover {
+    background-color: rgba(255, 107, 53, 0.08);
+  }
