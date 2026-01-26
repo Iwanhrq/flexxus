@@ -7,6 +7,8 @@ import WhatsAppButton from './components/WhatsAppButton'
 import Produtos from './pages/Produtos'
 import Segmentos from './pages/Segmentos'
 import Institucional from './pages/Institucional'
+import ProdutoDetalhes from './components/ProdutoDetalhes'
+
 import './App.css'
 
 function App() {
@@ -20,6 +22,7 @@ function App() {
           <Route path="/institucional" element={<Institucional />} />
           <Route path="/segmentos" element={<Segmentos />} />
           <Route path="/produtos" element={<Produtos />} />
+          <Route path="/produto/:id" element={<ProdutoDetalhes />} />
         </Routes>
       </main>
       <Footer />

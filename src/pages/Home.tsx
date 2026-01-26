@@ -3,14 +3,24 @@ import AboutSection from '../components/AboutSection';
 import ProductsSection from '../components/ProductsSection';
 import SegmentsSection from '../components/SegmentsSection';
 import ClientsSection from '../components/ClientsSection';
+import carousel1 from '../assets/carrossel_home_1.webp';
+import carousel2 from '../assets/carrossel_home_2.webp';
+import carousel3 from '../assets/carrossel_home_3.webp';
+import carousel4 from '../assets/carrossel_home_4.webp';
+import imagemSobre from '../assets/sobre_home.webp';
+import imagemACN205 from '../assets/ACN_205.webp';
+import imagemEpoxiGelFXFiltro from '../assets/CONJUNTO EPOXI 700A _ 701B; GEL DE BORDA INCOLOR _ PRETO; FX 809; FILTRO SOLAR.webp';
+import imagemFitasMultiTransGlasing from '../assets/FITA DUPLA FACE MULTICAMADAS; FITA DUPLA CAMADA TRANSPARENTE; FITA DUPLA FACE GLASING.webp';
+import imagemAlicate from '../assets/ALICATE PARA APLICAÇÃO DE FITA DUPLA FACE GLASING.webp';
+
 
 function Home() {
   // Imagens do Carousel
   const carouselImages = [
-    'https://via.placeholder.com/1200x500/ff6b35/ffffff?text=Imagem+1',
-    'https://via.placeholder.com/1200x500/ff8c42/ffffff?text=Imagem+2',
-    'https://via.placeholder.com/1200x500/ffa366/ffffff?text=Imagem+3',
-    'https://via.placeholder.com/1200x500/ffb380/ffffff?text=Imagem+4',
+    carousel1,
+    carousel2,
+    carousel3,
+    carousel4,
   ];
 
   // Texto da seção "A Flexxus"
@@ -25,26 +35,26 @@ function Home() {
     {
       id: '1',
       name: 'ACN 205',
-      imageUrl: 'https://via.placeholder.com/300x300/ff6b35/ffffff?text=ACN+205',
-      link: '/produto/acn-205'
+      imageUrl: imagemACN205,
+      link: '/produto/te-3003'
     },
     {
       id: '2',
-      name: 'AC-560',
-      imageUrl: 'https://via.placeholder.com/300x300/ff8c42/ffffff?text=AC-560',
-      link: '/produto/ac-560'
+      name: 'CONJUNTO EPOXI 700A / 701B',
+      imageUrl: imagemEpoxiGelFXFiltro,
+      link: '/produto/te-7002-a-b'
     },
     {
       id: '3',
-      name: 'FX-800',
-      imageUrl: 'https://via.placeholder.com/300x300/ffa366/ffffff?text=FX-800',
-      link: '/produto/fx-800'
+      name: 'FITA DUPLA FACE GLASING',
+      imageUrl: imagemFitasMultiTransGlasing,
+      link: '/produto/fita-dupla-face-glasing'
     },
     {
       id: '4',
-      name: 'AC-385-X',
-      imageUrl: 'https://via.placeholder.com/300x300/ffb380/ffffff?text=AC-385-X',
-      link: '/produto/ac-385-x'
+      name: 'ALICATE PARA APLICAÇÃO DE FITA DUPLA FACE GLASING',
+      imageUrl: imagemAlicate,
+      link: '/produto/alicate-rolete'
     }
   ];
 
@@ -91,7 +101,7 @@ function Home() {
         paragraphs={aboutParagraphs}
         buttonText="Saiba mais"
         buttonLink="/institucional"
-        imageUrl="https://via.placeholder.com/600x400/ff6b35/ffffff?text=Imagem+Sobre"
+        imageUrl={imagemSobre}
         imageAlt="Sobre a Flexxus"
       />
 

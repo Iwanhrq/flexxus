@@ -1,4 +1,5 @@
 import './ProductsSection.css';
+import imagemProdutos from '../assets/ACN_205.webp';
 
 interface Product {
   id: string;
@@ -22,25 +23,25 @@ function ProductsSection({
     {
       id: '1',
       name: 'ACN 205',
-      imageUrl: 'https://via.placeholder.com/300x300/ff6b35/ffffff?text=ACN+205',
+      imageUrl: imagemProdutos,
       link: '/produto/acn-205'
     },
     {
       id: '2',
       name: 'AC-560',
-      imageUrl: 'https://via.placeholder.com/300x300/ff8c42/ffffff?text=AC-560',
+      imageUrl: imagemProdutos,
       link: '/produto/ac-560'
     },
     {
       id: '3',
       name: 'FX-800',
-      imageUrl: 'https://via.placeholder.com/300x300/ffa366/ffffff?text=FX-800',
+      imageUrl: imagemProdutos,
       link: '/produto/fx-800'
     },
     {
       id: '4',
       name: 'AC-385-X',
-      imageUrl: 'https://via.placeholder.com/300x300/ffb380/ffffff?text=AC-385-X',
+      imageUrl: imagemProdutos,
       link: '/produto/ac-385-x'
     }
   ],
