@@ -32,6 +32,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
   display: block;
 }
 
@@ -104,7 +105,12 @@
 /* Responsive Design */
 @media (max-width: 768px) {
   .carousel-container {
-    height: 400px;
+    height: 350px; /* Aumentado de 400px */
+  }
+
+  .carousel-slide img {
+    object-fit: contain; /* Mudado de cover para contain */
+    background-color: #000; /* Fundo preto para preencher espaços vazios */
   }
 
   .carousel-button {
@@ -127,7 +133,11 @@
 
 @media (max-width: 480px) {
   .carousel-container {
-    height: 300px;
+    height: 250px; /* Aumentado de 300px */
+  }
+
+  .carousel-slide img {
+    object-fit: contain; /* Garante que a imagem inteira apareça */
   }
 
   .carousel-button {
@@ -162,4 +172,8 @@
 [data-theme="light"] .carousel-indicator.active {
   background-color: #ff6b35;
   border-color: #ff6b35;
+}
+
+[data-theme="light"] .carousel-slide img {
+  background-color: #f5f5f5; /* Fundo claro para o light mode */
 }
