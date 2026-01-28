@@ -23,6 +23,14 @@ function Home() {
     carousel4,
   ];
 
+  // Posições customizadas para cada imagem no mobile
+  const carouselImagePositions = [
+    'left center',    // Imagem 1 - mostra mais a esquerda
+    'left center',    // Imagem 2 - mostra mais a esquerda
+    '50% center',   // Imagem 3 - mostra mais a DIREITA
+    'left center',    // Imagem 4 - mostra mais a esquerda
+  ];
+
   // Texto da seção "A Flexxus"
   const aboutParagraphs = [
     'Fundada em Monte Mor em setembro de 2003 a FLEXXUS ADESIVOS conta com um seleto time de profissionais com mais de 30 anos de experiência no desenvolvimento de adesivos e selantes.',
@@ -93,7 +101,12 @@ function Home() {
   return (
     <main className="home-page">
       {/* Carousel Principal */}
-      <Carousel images={carouselImages} autoPlay={true} interval={5000} />
+      <Carousel 
+        images={carouselImages} 
+        autoPlay={true} 
+        interval={5000}
+        imagePositions={carouselImagePositions}
+      />
 
       {/* Seção Sobre a Flexxus */}
       <AboutSection

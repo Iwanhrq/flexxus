@@ -5,9 +5,10 @@ interface CarouselProps {
   images: string[];
   autoPlay?: boolean;
   interval?: number;
+  imagePositions?: string[]; // Nova prop para controlar posição de cada imagem
 }
 
-function Carousel({ images, autoPlay = true, interval = 5000 }: CarouselProps) {
+function Carousel({ images, autoPlay = true, interval = 5000, imagePositions }: CarouselProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const goToNext = () => {
@@ -56,7 +57,15 @@ function Carousel({ images, autoPlay = true, interval = 5000 }: CarouselProps) {
               key={index}
               className="carousel-slide"
             >
-              <img src={image} alt={`Slide ${index + 1}`} />
+              <img 
+                src={image} 
+                alt={`Slide ${index + 1}`}
+                style={{
+                  objectPosition: imagePositions && imagePositions[index] 
+                    ? imagePositions[index] 
+                    : undefined
+                }}
+              />
             </div>
           ))}
         </div>
