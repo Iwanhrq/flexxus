@@ -26,7 +26,7 @@ function Home() {
   // Posições customizadas para cada imagem no mobile
   const carouselImagePositions = [
     'left center',    // Imagem 1 - mostra mais a esquerda
-    'left center',    // Imagem 2 - mostra mais a esquerda
+    '3% center',    // Imagem 2 - mostra mais a esquerda
     '50% center',   // Imagem 3 - mostra mais a DIREITA
     'left center',    // Imagem 4 - mostra mais a esquerda
   ];
